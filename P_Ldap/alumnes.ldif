@@ -1,0 +1,4 @@
+dn: cn=alumnes,ou=Groups,dc=serverxldap,dc=net
+objectClass: alumnsGroup
+cn: alumnes
+gidNumber: 5001

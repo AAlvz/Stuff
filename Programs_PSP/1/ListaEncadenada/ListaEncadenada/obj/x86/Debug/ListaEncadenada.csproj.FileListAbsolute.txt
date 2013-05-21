@@ -1,0 +1,5 @@
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaEncadenada\ListaEncadenada\bin\Debug\ListaEncadenada.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaEncadenada\ListaEncadenada\bin\Debug\ListaEncadenada.pdb
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaEncadenada\ListaEncadenada\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaEncadenada\ListaEncadenada\obj\x86\Debug\ListaEncadenada.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaEncadenada\ListaEncadenada\obj\x86\Debug\ListaEncadenada.pdb

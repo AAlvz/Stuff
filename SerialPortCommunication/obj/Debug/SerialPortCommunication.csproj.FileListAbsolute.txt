@@ -1,0 +1,10 @@
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\bin\Debug\SerialPortCommunication.exe.config
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\SerialPortCommunication.exe
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\SerialPortCommunication.pdb
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\bin\Debug\SerialPortCommunication.exe
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\bin\Debug\SerialPortCommunication.pdb
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\PCComm.frmMain.resources
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\PCComm.Properties.Resources.resources
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\AlFoNsO\Documents\Visual Studio 2010\Projects\SerialPortCommunication\obj\Debug\GenerateResource-ResGen.write.1.tlog

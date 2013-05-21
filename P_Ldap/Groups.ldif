@@ -1,0 +1,3 @@
+dn: ou=Groups,dc=serverxldap,dc=net
+objectClass: organizationalUnit
+ou: Groups

@@ -1,0 +1,5 @@
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaChida\ListaChida\bin\Debug\ListaChida.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaChida\ListaChida\bin\Debug\ListaChida.pdb
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaChida\ListaChida\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaChida\ListaChida\obj\x86\Debug\ListaChida.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\ListaChida\ListaChida\obj\x86\Debug\ListaChida.pdb

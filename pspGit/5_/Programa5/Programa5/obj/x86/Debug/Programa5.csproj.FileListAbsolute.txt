@@ -1,0 +1,5 @@
+c:\users\alfonso\documents\visual studio 2010\Projects\Programa5\Programa5\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alfonso\documents\visual studio 2010\Projects\Programa5\Programa5\bin\Debug\Programa5.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\Programa5\Programa5\bin\Debug\Programa5.pdb
+c:\users\alfonso\documents\visual studio 2010\Projects\Programa5\Programa5\obj\x86\Debug\Programa5.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\Programa5\Programa5\obj\x86\Debug\Programa5.pdb

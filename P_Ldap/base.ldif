@@ -1,0 +1,33 @@
+dn: ou=Users,dc=serverxldap,dc=dev
+objectClass: organizationalUnit
+ou: Users
+
+dn: uid=rkhan,ou=Users,dc=serverxldap,dc=dev
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: rkhan
+sn: Khan
+givenName: Ryaz
+cn: Ryaz Khan
+displayName: Ryaz Khan
+uidNumber: 10000
+gidNumber: 10000
+userPassword: serverxldap
+gecos: Ryaz Khan
+loginShell: /bin/bash
+homeDirectory: /profiles/rkhan
+mail: ryaz.khan@live.com
+telephoneNumber: 000-000-0000
+st: NY
+manager: uid=rkhan,ou=Users,dc=serverxldap,dc=dev
+shadowExpire: -1
+shadowFlag: 0
+shadowWarning: 7
+shadowMin: 8
+shadowMax: 999999
+shadowLastChange: 10877
+title: System Administrator

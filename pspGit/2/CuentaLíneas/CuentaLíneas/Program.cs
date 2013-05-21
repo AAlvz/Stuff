@@ -1,0 +1,151 @@
+﻿//////////////////////////////////////////////
+/// Programa No.    -> 2
+/// *Descripcion.   -> Cuenta Lineas
+/// *Desarrollador. -> Alfonso Alvarez Sánchez
+/// *Fecha.         -> 17 / 09 / 2011
+/// Equipo          -> Individual
+/// Notas           -> Cuenta de acuerdo al estandar de codificación.
+///////////////////////////////////////////////
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+
+namespace CuentaLíneas
+{
+    class Program
+    {
+        //EMPIEZA CLASE MAIN----
+        static void Main(string[] args)
+        {
+            int contador = 0;
+            string linea = "";
+            StreamReader archivo = new StreamReader("C:\\Programa8.txt");
+            int numMetodo = 0;
+            linea = archivo.ReadLine();
+            linea = linea.Trim();
+            while (linea != null) 
+            {
+                linea = linea.Trim();
+                if ((linea.Length != 0) && (linea == "{" || linea == "}" || linea == ""))
+                {
+                    if (linea.Length > 2) { 
+                        if(linea.Substring(0, 2) == "//")
+                        {
+                        }
+                    }else if(linea.Length > 7)
+                    {
+                        if(linea.Substring(0, 7) == "#region")
+                        {
+                        }
+                    }
+                }
+                else {
+                    if (linea.Length > 2 && (linea.Trim().Substring(0, 2) == "/*"))
+                    {
+                        Console.WriteLine("COMENTARIOSOSOSOSO");
+                        while (linea.Length > 2 && (linea.Trim().Substring(0, 2) != "*/"))
+                        {
+                            
+                            linea = archivo.ReadLine();
+                        }
+                    }
+                    else if (linea.Trim() == "")
+                    {
+
+                    }
+                    else if (linea.Trim().Substring(0, 2) == "//") 
+                    { 
+                    }else
+                    {
+                        contador++;
+                        Console.WriteLine(linea);
+                    }
+                    
+                    
+                }
+                if (linea.Length > 16 && (linea.Substring(0, 16) == "//EMPIEZA METODO" || linea.Substring(0, 15) == "//EMPIEZA CLASE"))
+                {
+                    
+                    numMetodo++;
+                    string metodo = linea.Substring(16, 4);
+                    int contador2 = 0;
+                    while (linea != null)
+                        {
+                            if (linea.Length != 0)
+                            {
+                                if (linea.Length > 2)
+                                {
+                                    if (linea.Substring(0, 2) == "//")
+                                    {
+                                        //es un comentario
+                                    }
+                                    else {
+                                        //contador2++;
+                                        if (linea.Length > 7)
+                                        {
+                                            if (linea.Substring(0, 7) == "#region")
+                                            {
+                                                // es una region. no se cuenta
+                                            }
+                                            else {
+                                                if (linea.Length > 9 ) {
+                                                    if (linea.Substring(0, 9) == "//TERMINA") {
+                                                        Console.WriteLine("Termina OTRO metodo");
+                                                    }
+                                                }
+                                                if ((linea.Trim() == "{" || linea.Trim() == "}" || linea.Trim() == "") || linea.Length == 1)
+                                                {
+                                                    
+                                                }
+                                                else {
+                                                    if (linea.Trim().Substring(0, 2) == "//")
+                                                    {
+
+                                                    }else if (linea.Trim().Substring(0, 2) == "/*"){
+                                                            while (linea.Trim().IndexOf("*/") != 0)
+                                                            {
+                                                                linea = archivo.ReadLine();
+                                                            }
+                                                        }else {
+                                                        contador2++;
+                                                        Console.WriteLine(linea);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                } 
+                                else {
+
+                                    if (linea.Length < 2 || linea.Length == 0)
+                                    {
+                                        if (linea.Trim() == "{" || linea.Trim() == "}" || linea.Trim() == "") { }
+                                    }
+                                    else {
+                                        contador2++;
+                                    }   
+                                }
+                            }
+                            else
+                            {
+                                //contador2++;
+                            }
+                            linea = archivo.ReadLine();
+                        }
+                        Console.WriteLine("El metodo o clase numero " + numMetodo + " llamado " + metodo + " tiene " + contador2 + " lineas.");
+                        contador = contador + contador2;
+                        contador2 = 0;
+                    }           
+                
+                    linea = archivo.ReadLine();
+            }
+            archivo.Close();
+            Console.WriteLine("Fin de Archivo. Tienes " + contador + " lineas fisicas en tu codigo");
+            Console.ReadLine();
+        }
+        //TERMINA METODO MAIN
+    }
+}

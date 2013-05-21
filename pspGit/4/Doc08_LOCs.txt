@@ -1,0 +1,148 @@
+//////////////////////////////////////////////
+/// Programa No.    -> 4
+/// *Descripcion.   -> Programa 4
+/// *Desarrollador. -> Alfonso Alvarez Sánchez
+/// *Fecha.         -> 09 / 10 / 2011
+/// Equipo          -> Individual
+/// Notas           -> Evalúa parámentros para obtener desv estandar entre otros. 
+///////////////////////////////////////////////
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Programa4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<double> listaLineas = new List<double>();
+            List<double> listaNumMetodos = new List<double>();
+            List<double> listaPaginas = new List<double>();
+            List<double> listaLineasPorMetodo = new List<double>();
+            listaLineas.Add(18);
+            listaLineas.Add(18);
+            listaLineas.Add(25);
+            listaLineas.Add(31);
+            listaLineas.Add(37);
+            listaLineas.Add(82);
+            listaLineas.Add(82);
+            listaLineas.Add(87);
+            listaLineas.Add(89);
+            listaLineas.Add(230);
+            listaLineas.Add(85);
+            listaLineas.Add(87);
+            listaLineas.Add(558);
+
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(5);
+            listaNumMetodos.Add(4);
+            listaNumMetodos.Add(4);
+            listaNumMetodos.Add(4);
+            listaNumMetodos.Add(10);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(3);
+            listaNumMetodos.Add(10);
+
+            listaPaginas.Add(7);
+            listaPaginas.Add(12);
+            listaPaginas.Add(10);
+            listaPaginas.Add(12);
+            listaPaginas.Add(10);
+            listaPaginas.Add(12);
+            listaPaginas.Add(12);
+            listaPaginas.Add(12);
+            listaPaginas.Add(12);
+            listaPaginas.Add(8);
+            listaPaginas.Add(8);
+            listaPaginas.Add(8);
+            listaPaginas.Add(20);
+            listaPaginas.Add(14);
+            listaPaginas.Add(18);
+            listaPaginas.Add(12);
+
+            for(int i = 0; i < listaLineas.Count; i++)
+            {
+                listaLineasPorMetodo.Add(listaLineas[i]/listaNumMetodos[i]);
+            }
+            ClaseFuncionesMatematicas funciones = new ClaseFuncionesMatematicas();
+            double Prom1 = ((funciones.obtenerSumatoriaDeLogs(listaLineasPorMetodo)) / listaLineasPorMetodo.Count);
+            double desvEstandar1 = Math.Pow(funciones.calcularVarianza(listaLineasPorMetodo), .5);
+            Console.WriteLine("VS1 = " + Math.Pow(Math.E, ((Prom1) - (2*desvEstandar1))));
+            double vs1 = Math.Pow(Math.E, ((Prom1) - (2 * desvEstandar1)));
+            Console.WriteLine("S1 = " + Math.Pow(Math.E, ((Prom1) - (desvEstandar1))));
+            Console.WriteLine("M1 = " + Math.Pow(Math.E, ((Prom1))));
+            Console.WriteLine("L1 = " + Math.Pow(Math.E, ((Prom1) + (desvEstandar1))));
+            Console.WriteLine("VL1 = " + Math.Pow(Math.E, ((Prom1) + (2*desvEstandar1))));
+
+            double Prom2 = (funciones.obtenerSumatoriaDeLogs(listaPaginas) / listaPaginas.Count);
+            double desvEstandar2 = Math.Pow(funciones.calcularVarianza(listaPaginas), .5);
+            Console.WriteLine("VS2 = " + Math.Pow(Math.E, ((Prom2) - (2 * desvEstandar2))));
+            Console.WriteLine("S2 = " + Math.Pow(Math.E, ((Prom2) - (desvEstandar2))));
+            Console.WriteLine("M2 = " + Math.Pow(Math.E, ((Prom2))));
+            Console.WriteLine("L2 = " + Math.Pow(Math.E, ((Prom2) + (desvEstandar2))));
+            Console.WriteLine("VL2 = " + Math.Pow(Math.E, ((Prom2) + (2 * desvEstandar2))));
+
+            Console.ReadLine();
+
+
+
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace Programa4
+{
+    class ClaseFuncionesMatematicas
+    {
+        //EMPIEZA METODO OBTENER PROMEDIO
+        public double obtenerPromedio(List<double> lst)
+        {
+            double sum = lst.Sum();
+            double numDatos = lst.Count;
+            double promedio = sum / numDatos;
+            return promedio;
+        }
+        //TERMINA METODO OBTENER PROMEDIO
+
+        //EMPIEZA METODO OBTENERSUMATORIADELOGARITMOS
+        public double obtenerSumatoriaDeLogs(List<double> lst) 
+        {
+            double sum = 0;
+            for (int i = 0; i < lst.Count; i++) 
+            {
+                sum = sum + Math.Log(lst[i]);
+            }
+            
+            return sum;
+        }
+        //TERMINA METODO OBTENER SUMATORIA DE LOGARITMOS
+
+        //EMPIEZA METODO CALCULARVARIANZA
+        public double calcularVarianza(List<double> lst)
+        {
+            double sum = 0;
+            double prom = obtenerSumatoriaDeLogs(lst) / lst.Count;
+            for (int i = 0; i < lst.Count; i++) 
+            {
+                sum = sum + (Math.Pow((Math.Log(lst[i]) - prom), 2));
+            }
+            double var = (sum / (lst.Count - 1));
+            return var;
+        }
+        //TERMINA METODO CALCULAR VARIAZA
+
+    }
+}
+

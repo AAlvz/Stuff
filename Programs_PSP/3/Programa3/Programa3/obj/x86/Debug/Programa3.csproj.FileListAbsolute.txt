@@ -1,0 +1,5 @@
+C:\Users\AlFoNsO\documents\visual studio 2010\Projects\Programa3\Programa3\bin\Debug\Programa3.exe
+C:\Users\AlFoNsO\documents\visual studio 2010\Projects\Programa3\Programa3\bin\Debug\Programa3.pdb
+C:\Users\AlFoNsO\documents\visual studio 2010\Projects\Programa3\Programa3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlFoNsO\documents\visual studio 2010\Projects\Programa3\Programa3\obj\x86\Debug\Programa3.exe
+C:\Users\AlFoNsO\documents\visual studio 2010\Projects\Programa3\Programa3\obj\x86\Debug\Programa3.pdb

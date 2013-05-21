@@ -1,0 +1,3 @@
+[paths]
+default = ssh://hg@bitbucket.org/AAlvz/somescripts
+default-push = ssh://hg@bitbucket.org/AAlvz/somescripts

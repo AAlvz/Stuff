@@ -1,0 +1,5 @@
+c:\users\alfonso\documents\visual studio 2010\Projects\CuentaLíneas\CuentaLíneas\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alfonso\documents\visual studio 2010\Projects\CuentaLíneas\CuentaLíneas\bin\Debug\CuentaLíneas.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\CuentaLíneas\CuentaLíneas\bin\Debug\CuentaLíneas.pdb
+c:\users\alfonso\documents\visual studio 2010\Projects\CuentaLíneas\CuentaLíneas\obj\x86\Debug\CuentaLíneas.exe
+c:\users\alfonso\documents\visual studio 2010\Projects\CuentaLíneas\CuentaLíneas\obj\x86\Debug\CuentaLíneas.pdb

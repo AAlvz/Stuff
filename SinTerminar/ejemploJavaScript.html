@@ -1,0 +1,39 @@
+<html>
+	<body>
+		<p>Prueba1</p>
+		<SCRIPT type="text/javascript">
+			document.writeln("Hola mundo<p>");
+			document.writeln("asd");
+			document.writeln("iki");
+		</SCRIPT>
+
+		<p>SEPARADOR</P>
+		<SCRIPT type="text/javascript">
+			function alerta(texto)
+			{
+				alert("hola. Este es tu texto: " + texto);
+
+			}
+
+			function detectarTecla(e)
+			{
+				var evt = e ? e : event;
+				var key = window.Event ? evt.which : evt.keyValue;
+				key = /\d$/ ? alert ("Nadaa") : alert(key);
+			}
+		</SCRIPT>
+
+<FORM>
+
+<input type="text" name="txt1" onkeydown="detectarTecla(event);" onkeypress="return num(event);">
+
+
+<input name="button2" type="button" 
+onclick='alerta(document.forms[0].txt1.value + "  Heloww")' value="Escribe tu nombre ahi " />
+</FORM>	
+
+	<body>
+
+</html>
+
+
